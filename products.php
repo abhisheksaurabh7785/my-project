@@ -44,12 +44,12 @@ Javascript is disabled or is not supported by your browser. Please <a href="http
 
 <thead>
 <tr>
-	<th><input class="check-all" type="checkbox" /></th>
-	<th>Column 1</th>
-	<th>Column 2</th>
-	<th>Column 3</th>
-	<th>Column 4</th>
-	<th>Column 5</th>
+<th><input class="check-all" type="checkbox" /></th>
+<th>Column 1</th>
+<th>Column 2</th>
+<th>Column 3</th>
+<th>Column 4</th>
+<th>Column 5</th>
 </tr>
 
 </thead>
@@ -57,24 +57,24 @@ Javascript is disabled or is not supported by your browser. Please <a href="http
 <tfoot>
 <tr>
 <td colspan="6">
-	<div class="bulk-actions align-left">
-		<select name="dropdown">
-			<option value="option1">Choose an action...</option>
-			<option value="option2">Edit</option>
-			<option value="option3">Delete</option>
-		</select>
-		<a class="button" href="#">Apply to selected</a>
-	</div>
-	
-	<div class="pagination">
-		<a href="#" title="First Page">&laquo; First</a><a href="#" title="Previous Page">&laquo; Previous</a>
-		<a href="#" class="number" title="1">1</a>
-		<a href="#" class="number" title="2">2</a>
-		<a href="#" class="number current" title="3">3</a>
-		<a href="#" class="number" title="4">4</a>
-		<a href="#" title="Next Page">Next &raquo;</a><a href="#" title="Last Page">Last &raquo;</a>
-	</div> <!-- End .pagination -->
-	<div class="clear"></div>
+<div class="bulk-actions align-left">
+<select name="dropdown">
+<option value="option1">Choose an action...</option>
+<option value="option2">Edit</option>
+<option value="option3">Delete</option>
+</select>
+<a class="button" href="#">Apply to selected</a>
+</div>
+
+<div class="pagination">
+<a href="#" title="First Page">&laquo; First</a><a href="#" title="Previous Page">&laquo; Previous</a>
+<a href="#" class="number" title="1">1</a>
+<a href="#" class="number" title="2">2</a>
+<a href="#" class="number current" title="3">3</a>
+<a href="#" class="number" title="4">4</a>
+<a href="#" title="Next Page">Next &raquo;</a><a href="#" title="Last Page">Last &raquo;</a>
+</div> <!-- End .pagination -->
+<div class="clear"></div>
 </td>
 </tr>
 </tfoot>
@@ -87,10 +87,10 @@ Javascript is disabled or is not supported by your browser. Please <a href="http
 <td>Consectetur adipiscing</td>
 <td>Donec tortor diam</td>
 <td>
-	<!-- Icons -->
-		<a href="#" title="Edit"><img src="resources/images/icons/pencil.png" alt="Edit" /></a>
-		<a href="#" title="Delete"><img src="resources/images/icons/cross.png" alt="Delete" /></a> 
-		<a href="#" title="Edit Meta"><img src="resources/images/icons/hammer_screwdriver.png" alt="Edit Meta" /></a>
+<!-- Icons -->
+<a href="#" title="Edit"><img src="resources/images/icons/pencil.png" alt="Edit" /></a>
+<a href="#" title="Delete"><img src="resources/images/icons/cross.png" alt="Delete" /></a> 
+<a href="#" title="Edit Meta"><img src="resources/images/icons/hammer_screwdriver.png" alt="Edit Meta" /></a>
 </td>
 </tr>
 
@@ -101,10 +101,10 @@ Javascript is disabled or is not supported by your browser. Please <a href="http
 <td>Consectetur adipiscing</td>
 <td>Donec tortor diam</td>
 <td>
-	<!-- Icons -->
-		<a href="#" title="Edit"><img src="resources/images/icons/pencil.png" alt="Edit" /></a>
-		<a href="#" title="Delete"><img src="resources/images/icons/cross.png" alt="Delete" /></a> 
-		<a href="#" title="Edit Meta"><img src="resources/images/icons/hammer_screwdriver.png" alt="Edit Meta" /></a>
+<!-- Icons -->
+<a href="#" title="Edit"><img src="resources/images/icons/pencil.png" alt="Edit" /></a>
+<a href="#" title="Delete"><img src="resources/images/icons/cross.png" alt="Delete" /></a> 
+<a href="#" title="Edit Meta"><img src="resources/images/icons/hammer_screwdriver.png" alt="Edit Meta" /></a>
 </td>
 </tr>
 
@@ -115,10 +115,10 @@ Javascript is disabled or is not supported by your browser. Please <a href="http
 <td>Consectetur adipiscing</td>
 <td>Donec tortor diam</td>
 <td>
-	<!-- Icons -->
-		<a href="#" title="Edit"><img src="resources/images/icons/pencil.png" alt="Edit" /></a>
-		<a href="#" title="Delete"><img src="resources/images/icons/cross.png" alt="Delete" /></a> 
-		<a href="#" title="Edit Meta"><img src="resources/images/icons/hammer_screwdriver.png" alt="Edit Meta" /></a>
+<!-- Icons -->
+<a href="#" title="Edit"><img src="resources/images/icons/pencil.png" alt="Edit" /></a>
+<a href="#" title="Delete"><img src="resources/images/icons/cross.png" alt="Delete" /></a> 
+<a href="#" title="Edit Meta"><img src="resources/images/icons/hammer_screwdriver.png" alt="Edit Meta" /></a>
 </td>
 </tr>
 
@@ -129,10 +129,10 @@ Javascript is disabled or is not supported by your browser. Please <a href="http
 <td>Consectetur adipiscing</td>
 <td>Donec tortor diam</td>
 <td>
-	<!-- Icons -->
-		<a href="#" title="Edit"><img src="resources/images/icons/pencil.png" alt="Edit" /></a>
-		<a href="#" title="Delete"><img src="resources/images/icons/cross.png" alt="Delete" /></a> 
-		<a href="#" title="Edit Meta"><img src="resources/images/icons/hammer_screwdriver.png" alt="Edit Meta" /></a>
+<!-- Icons -->
+<a href="#" title="Edit"><img src="resources/images/icons/pencil.png" alt="Edit" /></a>
+<a href="#" title="Delete"><img src="resources/images/icons/cross.png" alt="Delete" /></a> 
+<a href="#" title="Edit Meta"><img src="resources/images/icons/hammer_screwdriver.png" alt="Edit Meta" /></a>
 </td>
 </tr>
 
@@ -143,10 +143,10 @@ Javascript is disabled or is not supported by your browser. Please <a href="http
 <td>Consectetur adipiscing</td>
 <td>Donec tortor diam</td>
 <td>
-	<!-- Icons -->
-		<a href="#" title="Edit"><img src="resources/images/icons/pencil.png" alt="Edit" /></a>
-		<a href="#" title="Delete"><img src="resources/images/icons/cross.png" alt="Delete" /></a> 
-		<a href="#" title="Edit Meta"><img src="resources/images/icons/hammer_screwdriver.png" alt="Edit Meta" /></a>
+<!-- Icons -->
+<a href="#" title="Edit"><img src="resources/images/icons/pencil.png" alt="Edit" /></a>
+<a href="#" title="Delete"><img src="resources/images/icons/cross.png" alt="Delete" /></a> 
+<a href="#" title="Edit Meta"><img src="resources/images/icons/hammer_screwdriver.png" alt="Edit Meta" /></a>
 </td>
 </tr>
 
@@ -157,10 +157,10 @@ Javascript is disabled or is not supported by your browser. Please <a href="http
 <td>Consectetur adipiscing</td>
 <td>Donec tortor diam</td>
 <td>
-	<!-- Icons -->
-		<a href="#" title="Edit"><img src="resources/images/icons/pencil.png" alt="Edit" /></a>
-		<a href="#" title="Delete"><img src="resources/images/icons/cross.png" alt="Delete" /></a> 
-		<a href="#" title="Edit Meta"><img src="resources/images/icons/hammer_screwdriver.png" alt="Edit Meta" /></a>
+<!-- Icons -->
+<a href="#" title="Edit"><img src="resources/images/icons/pencil.png" alt="Edit" /></a>
+<a href="#" title="Delete"><img src="resources/images/icons/cross.png" alt="Delete" /></a> 
+<a href="#" title="Edit Meta"><img src="resources/images/icons/hammer_screwdriver.png" alt="Edit Meta" /></a>
 </td>
 </tr>
 
@@ -171,10 +171,10 @@ Javascript is disabled or is not supported by your browser. Please <a href="http
 <td>Consectetur adipiscing</td>
 <td>Donec tortor diam</td>
 <td>
-	<!-- Icons -->
-		<a href="#" title="Edit"><img src="resources/images/icons/pencil.png" alt="Edit" /></a>
-		<a href="#" title="Delete"><img src="resources/images/icons/cross.png" alt="Delete" /></a> 
-		<a href="#" title="Edit Meta"><img src="resources/images/icons/hammer_screwdriver.png" alt="Edit Meta" /></a>
+<!-- Icons -->
+<a href="#" title="Edit"><img src="resources/images/icons/pencil.png" alt="Edit" /></a>
+<a href="#" title="Delete"><img src="resources/images/icons/cross.png" alt="Delete" /></a> 
+<a href="#" title="Edit Meta"><img src="resources/images/icons/hammer_screwdriver.png" alt="Edit Meta" /></a>
 </td>
 </tr>
 
@@ -185,10 +185,10 @@ Javascript is disabled or is not supported by your browser. Please <a href="http
 <td>Consectetur adipiscing</td>
 <td>Donec tortor diam</td>
 <td>
-	<!-- Icons -->
-		<a href="#" title="Edit"><img src="resources/images/icons/pencil.png" alt="Edit" /></a>
-		<a href="#" title="Delete"><img src="resources/images/icons/cross.png" alt="Delete" /></a> 
-		<a href="#" title="Edit Meta"><img src="resources/images/icons/hammer_screwdriver.png" alt="Edit Meta" /></a>
+<!-- Icons -->
+<a href="#" title="Edit"><img src="resources/images/icons/pencil.png" alt="Edit" /></a>
+<a href="#" title="Delete"><img src="resources/images/icons/cross.png" alt="Delete" /></a> 
+<a href="#" title="Edit Meta"><img src="resources/images/icons/hammer_screwdriver.png" alt="Edit Meta" /></a>
 </td>
 </tr>
 </tbody>
@@ -199,23 +199,23 @@ Javascript is disabled or is not supported by your browser. Please <a href="http
 
 <div class="tab-content" id="tab2">
 
-<form action="update.php" method="post">
+<form action="update.php" method="post" enctype="multipart/form-data">
 
 <fieldset> <!-- Set class to "column-left" or "column-right" on fieldsets to divide the form into columns -->
 
 <p>
 <label>Name</label>
-<input class="text-input medium-input datepicker" type="text" id="medium-input" name="medium-input" /> 
+<input class="text-input medium-input datepicker" type="text" id="medium-input" name="name" /> 
 </p>
 
 <p>
 <label>Price</label>
-<input class="text-input small-input" type="text" id="small-input" name="small-input" />  <!-- Classes for input-notification: success, error, information, attention -->
+<input class="text-input small-input" type="text" id="small-input" name="price" />  <!-- Classes for input-notification: success, error, information, attention -->
 </p>
 
 <p>
 <label>Image</label>
-<input class="text-input small-medium" type="file" id="small-medium" name="small-medium" />
+<input class="text-input small-medium" type="file" id="small-medium" name="image" />
 </p>
 
 <p>
@@ -242,7 +242,7 @@ Javascript is disabled or is not supported by your browser. Please <a href="http
 
 <p>
 <label>Description</label>
-<textarea class="text-input textarea wysiwyg" id="textarea" name="textfield" cols="79" rows="15"></textarea>
+<textarea class="text-input textarea wysiwyg" id="textarea" name="description" cols="79" rows="15"></textarea>
 </p>
 
 <p>
