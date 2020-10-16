@@ -28,7 +28,14 @@ if (isset($_POST['addOrder'])) {
 }
 if (isset($_POST['delete'])) {
     $id = $_POST['pid'];
-    //$msg = delCategory($id);
+    
+}
+
+if (isset($_POST['delete'])) {
+    $id = $_POST['pid'];
+    $sql = "DELETE FROM orders WHERE id = '$id' ";
+    mysqli_query($conn, $sql);
+    
 }
 ?>
 <div id="main-content">
@@ -84,7 +91,7 @@ Javascript to navigate the interface properly.
                                     <input class="check-all" type="checkbox" />
                                 </th>
                                 <th>Sr. No.</th>
-                                <th>Id</th>
+                                <!-- <th>Id</th> -->
                                 <th>Cartdata</th>
                                 <th>total</th>
                                 <th>status</th>
@@ -130,18 +137,18 @@ Javascript to navigate the interface properly.
                         <?php 
                             $sql = "SELECT * FROM orders";
                             $res = mysqli_query($conn, $sql);
-                            $sr = 1;
+                            $a = 1;
                             while($row = mysqli_fetch_assoc($res)){
                                 ?>
                             <tr>
                                 <td><input type="checkbox" /></td>
-                                <td><?php echo $sr++; ?></td>
-                                <td><?php echo $row['id']; ?></td>
+                                <td><?php echo $a++; ?></td>
+                                <!-- <td><?php //echo $row['id']; ?></td> -->
                                 <td><a href="#" title="title">
                                 <?php echo $row['cartdata']; ?></a></td>
-                                <?php echo $row['total']; ?></a></td>
-                                <?php echo $row['status']; ?></a></td>
-                                <?php echo $row['datetime']; ?></a></td>
+                                <td><?php echo $row['total']; ?></a></td>
+                                <td><?php echo $row['status']; ?></a></td>
+                                <td><?php echo $row['datetime']; ?></a></td>
                                 <!-- <td>Consectetur adipiscing</td>
                                 <td>Donec tortor diam</td> -->
                                 <td>
@@ -153,7 +160,7 @@ Javascript to navigate the interface properly.
                                     <form action="orders.php" method="post"
                                     style="display:inline;">
                                     <input type="hidden" name="pid" 
-                                    value="<?php// echo $row['category_id'] ?>">
+                                    value="<?php echo $row['id'] ?>">
                                     <button type="submit" name="delete"
                                     style="border:none; background: transparent;
                                     cursor: pointer;">
@@ -164,9 +171,9 @@ Javascript to navigate the interface properly.
                                     <!-- <a href="" title="Delete"><img 
                                     src="resources/images/icons/cross.png" 
                                     alt="Delete" /></a> -->
-                                <a href="#" title="Edit Meta">
+                                <!-- <a href="#" title="Edit Meta">
                         <img src="resources/images/icons/hammer_screwdriver.png" 
-                                    alt="Edit Meta" /></a>
+                                    alt="Edit Meta" /></a> -->
                                 </td>
                             </tr>
                             <?php } ?>
@@ -179,11 +186,11 @@ Javascript to navigate the interface properly.
                         <fieldset> 
                         <!-- Set class to "column-left" or "column-right" 
                         on fieldsets to divide the form into columns -->
-                        <p>
+                        <!-- <p>
                             <label>id</label>
                             <input class="text-input small-input" type="number" 
                             id="small-input" name="id" required />
-                        </p>
+                        </p> -->
                         <p>
                             <label>Cart_Data</label>
                             <input class="text-input small-input" type="text" 
