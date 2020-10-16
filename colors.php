@@ -9,10 +9,10 @@ $msg = '';
 if (isset($_POST['addcolor'])) {
     $pid = isset($_POST['pid'])?$_POST['pid']:"";
     $color = isset($_POST['color'])?$_POST['color']:"";
-    $qty = isset($_POST['qty'])?$_POST['qty']:"";
+    $quantity = isset($_POST['quantity'])?$_POST['quantity']:"";
 
-    // echo $pid, $color, $qty;
-    $sql = "INSERT INTO colors(`id`, `color`, `quantity`)VALUES('$pid', '$color', '$qty')" ;
+    // echo $pid, $color, $quantity;
+    $sql = "INSERT INTO colors(`id`, `color`, `quantity`)VALUES('$pid', '$color', '$quantity')" ;
     // echo "<script>alert($sql)</script>";
     // echo $sql;
     mysqli_query($conn, $sql);
@@ -127,16 +127,21 @@ Javascript to navigate the interface properly.
                         <?php 
                             $sql = "SELECT * FROM colors";
                             $res = mysqli_query($conn, $sql);
-                            $sr = 1;
+                            $a = 1;
                             while($row = mysqli_fetch_assoc($res)){
                                 ?>
                             <tr>
                                 <td><input type="checkbox" /></td>
-                                <td><?php echo $sr++; ?></td>
+                                <td><?php echo $a++; ?></td>
                                 <td><?php echo $row['id']; ?></td>
-                                <td><a href="#" title="title">
-                                <?php echo $row['color']; ?></a></td>
-                                <?php echo $row['quantity']; ?></a></td>
+                                <td>
+                                <a href="#" title="title">
+                                <?php echo $row['color']; ?>
+                                </a>
+                                </td>
+                                <td>
+                                <?php echo $row['quantity']; ?>
+                                </td>
                                 <!-- <td>Consectetur adipiscing</td>
                                 <td>Donec tortor diam</td> -->
                                 <td>
@@ -193,7 +198,7 @@ Javascript to navigate the interface properly.
                         <p>
                             <label>Quantity</label>
                             <input class="text-input small-input" type="text" 
-                            id="small-input" name="qty" required />  
+                            id="small-input" name="quantity" required />  
                         </p>
                         <!-- <p>
                             <label>Medium form input</label>
