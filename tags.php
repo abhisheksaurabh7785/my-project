@@ -6,7 +6,7 @@ include 'config.php';
 
 $msg = '';
 
-if (isset($_POST['addCategory'])) {
+if (isset($_POST['tag'])) {
     $name = isset($_POST['name'])?$_POST['name']:"";
     $id = isset($_POST['cid'])?$_POST['cid']:"";
     $sql = "INSERT INTO tags(`id`,`name`)VALUES('$id', '$name')" ;
@@ -226,7 +226,7 @@ Javascript to navigate the interface properly.
                         </p> -->
                         <p>
                             <input class="button" type="submit" value="Submit" 
-                            name="addCategory" />
+                            name="tag" />
                         </p>
                     </fieldset>
                     <div class="clear"></div>
