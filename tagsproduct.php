@@ -6,7 +6,7 @@ include 'config.php';
 
 $msg = '';
 
-if (isset($_POST['addCategory'])) {
+if (isset($_POST['tag'])) {
     $pid = isset($_POST['name'])?$_POST['name']:"";
     $tagid = isset($_POST['cid'])?$_POST['cid']:"";
     $sql = "INSERT INTO tags_products(`id`,`tag_id`)VALUES('$pid', '$tagid')" ;
@@ -122,12 +122,12 @@ Javascript to navigate the interface properly.
                         <?php 
                             $sql = "SELECT * FROM categories";
                             $res = mysqli_query($conn, $sql);
-                            $sr = 1;
+                            $a = 1;
                             while($row = mysqli_fetch_assoc($res)){
                                 ?>
                             <tr>
                                 <td><input type="checkbox" /></td>
-                                <td><?php echo $sr++; ?></td>
+                                <td><?php echo $a++; ?></td>
                                 <td><?php echo $row['id']; ?></td>
                                 <td><a href="#" title="title">
                                 <?php echo $row['name']; ?></a></td>
@@ -227,7 +227,7 @@ Javascript to navigate the interface properly.
                         </p> -->
                         <p>
                             <input class="button" type="submit" value="Submit" 
-                            name="addCategory" />
+                            name="tag" />
                         </p>
                     </fieldset>
                     <div class="clear"></div>
