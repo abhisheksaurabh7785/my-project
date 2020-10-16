@@ -6,15 +6,15 @@ include 'config.php';
 
 $msg = '';
 
-if (isset($_POST['adduser'])) {
+if (isset($_POST['user'])) {
     $pid = isset($_POST['pid'])?$_POST['pid']:"";
-    $username = isset($_POST['color'])?$_POST['color']:"";
-    $password = isset($_POST['qty'])?$_POST['qty']:"";
-    $email = isset($_POST['qt'])?$_POST['qt']:"";
-    $dob = isset($_POST['q'])?$_POST['q']:"";
-    $address = isset($_POST['p'])?$_POST['p']:"";
+    $username = isset($_POST['uname'])?$_POST['uname']:"";
+    $password = isset($_POST['pass'])?$_POST['pass']:"";
+    $email = isset($_POST['email'])?$_POST['email']:"";
+    $dob = isset($_POST['dob'])?$_POST['dob']:"";
+    $address = isset($_POST['add'])?$_POST['add']:"";
 
-    // echo $pid, $color, $qty;
+    // echo $pid, $color, $pass;
     $sql ="INSERT INTO users( `id`, `username`, `password`, `email`, `dob`, `address`)VALUES('$pid', '$username', '$password', '$email', '$dob','$address'  )";
     // echo "<script>alert($sql)</script>";
      //echo $sql;
@@ -29,7 +29,14 @@ if (isset($_POST['adduser'])) {
 }
 if (isset($_POST['delete'])) {
     $id = $_POST['pid'];
-    $msg = delCategory($id);
+    
+}
+
+if (isset($_POST['delete'])) {
+    $id = $_POST['pid'];
+    $sql = "DELETE FROM users WHERE id = '$id' ";
+    mysqli_query($conn, $sql);
+    
 }
 ?>
 <div id="main-content">
@@ -56,7 +63,7 @@ Javascript to navigate the interface properly.
         <div class="content-box">
             <!-- Start Content Box -->
             <div class="content-box-header">
-                <h3>Manage Colors</h3>
+                <h3>Manage Users</h3>
                 <ul class="content-box-tabs">
                     <li><a href="#tab1" class="default-tab">Manage</a></li> 
                     <!-- href must be unique and match the id of target div -->
@@ -85,12 +92,13 @@ Javascript to navigate the interface properly.
                                     <input class="check-all" type="checkbox" />
                                 </th>
                                 <th>Sr. No.</th>
-                                <th>Product Id</th>
-                                <th>Color Name</th>
-                                <th>Quantity</th>
+                                <!-- <th>Product Id</th> -->
+                                <th>UserName</th>
+                                 <!-- <th>Password</th>  -->
+                                <th>DOB</th>
+                                <th>Email</th>
+                                <th>Address</th>
                                 <th>Action</th>
-                                <!-- <th>Column 4</th>
-                                <th>Column 5</th> -->
                             </tr>
                         </thead>
                         <tfoot>
@@ -130,24 +138,24 @@ Javascript to navigate the interface properly.
                         <?php 
                             $sql = "SELECT * FROM users";
                             $res = mysqli_query($conn, $sql);
-                            $sr = 1;
+                            $a = 1;
                             while($row = mysqli_fetch_assoc($res)){
                                 ?>
                             <tr>
                                 <td><input type="checkbox" /></td>
-                                <td><?php echo $sr++; ?></td>
-                                <td><?php echo $row['id']; ?></td>
+                                <td><?php echo $a++; ?></td>
+                                <!-- <td><?php //echo $row['id']; ?></td> -->
                                 <td><a href="#" title="title">
                                 <?php echo $row['username']; ?></a></td>
-                                <?php echo $row['password']; ?></a></td>
-                                <?php echo $row['dob']; ?></a></td>
-                                <?php echo $row['email']; ?></a></td>
-                                <?php echo $row['address']; ?></a></td>
+                                 <!-- <td><?php //echo $row['password']; ?></a></td> -->
+                                <td><?php echo $row['dob']; ?></a></td>
+                                <td><?php echo $row['email']; ?></a></td>
+                                <td><?php echo $row['address']; ?></a></td>
                                 <!-- <td>Consectetur adipiscing</td>
                                 <td>Donec tortor diam</td> -->
                                 <td>
                                     <!-- Icons -->
-                <a href="catedit.php?id=<?php// echo $row['category_id'] ?>"
+                <a href="catedit.php?id=<?php//  ?>"
                                     title="Edit"><img 
                                     src="resources/images/icons/pencil.png" 
                                     alt="Edit" /></a>
@@ -165,9 +173,9 @@ Javascript to navigate the interface properly.
                                     <!-- <a href="" title="Delete"><img 
                                     src="resources/images/icons/cross.png" 
                                     alt="Delete" /></a> -->
-                                <a href="#" title="Edit Meta">
+                                <!-- <a href="#" title="Edit Meta">
                         <img src="resources/images/icons/hammer_screwdriver.png" 
-                                    alt="Edit Meta" /></a>
+                                    alt="Edit Meta" /></a> -->
                                 </td>
                             </tr>
                             <?php } ?>
@@ -179,42 +187,42 @@ Javascript to navigate the interface properly.
                     <form action="users.php" method="post">
                         <fieldset> 
                      
-                        <p>
+                        <!-- <p>
                             <label>Product Id</label>
                             <input class="text-input small-input" type="text" 
                             id="small-input" name="pid" required />
-                        </p>
+                        </p> -->
                         <p>
                             <label>Username</label>
                             <input class="text-input small-input" type="text" 
-                            id="small-input" name="color" required />
+                            id="small-input" name="uname" required />
                         </p>
                         <p>
                             <label>Password</label>
                             <input class="text-input small-input" type="text" 
-                            id="small-input" name="qty" required />
+                            id="small-input" name="pass" required />
                         </p>
                         <p>
                             <label>Email</label>
                             <input class="text-input small-input" type="text" 
-                            id="small-input" name="qt" required />
+                            id="small-input" name="email" required />
                         </p>
                         <p>
                             <label>dob</label>
                             <input class="text-input small-input" type="text" 
-                            id="small-input" name="q" required />
+                            id="small-input" name="dob" required />
                         </p>
                         <p>
                             <label>address</label>
                             <input class="text-input small-input" type="text" 
-                            id="small-input" name="p" required />
+                            id="small-input" name="add" required />
                         </p>
                         
                            
                         
                         <p>
                             <input class="button" type="submit" value="Submit" 
-                            name="adduser" />
+                            name="user" />
                         </p>
                     </fieldset>
                     <div class="clear"></div>
