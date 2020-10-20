@@ -49,7 +49,7 @@ Javascript to navigate the interface properly.
         <div class="content-box">
             <!-- Start Content Box -->
             <div class="content-box-header">
-                <h3>Manage Categories</h3>
+                <h3>Manage Tags</h3>
                 <ul class="content-box-tabs">
                     <li><a href="#tab1" class="default-tab">Manage</a></li> 
                     <!-- href must be unique and match the id of target div -->
@@ -120,14 +120,14 @@ Javascript to navigate the interface properly.
                         </tfoot>
                         <tbody>
                         <?php 
-                            $sql = "SELECT * FROM categories";
+                            $sql = "SELECT * FROM tags";
                             $res = mysqli_query($conn, $sql);
-                            $sr = 1;
+                            $a = 1;
                             while($row = mysqli_fetch_assoc($res)){
                                 ?>
                             <tr>
                                 <td><input type="checkbox" /></td>
-                                <td><?php echo $sr++; ?></td>
+                                <td><?php echo $a++; ?></td>
                                 <td><?php echo $row['id']; ?></td>
                                 <td><a href="#" title="title">
                                 <?php echo $row['name']; ?></a></td>
@@ -167,11 +167,11 @@ Javascript to navigate the interface properly.
                     <form action="#" method="post">
                         <fieldset> 
                         
-                        <p>
+                        <!-- <p>
                             <label>Tags Id</label>
                             <input class="text-input small-input" type="text" 
                             id="small-input" name="cid" required />
-                        </p>
+                        </p> -->
                         <p>
                             <label>Tags Name</label>
                             <input class="text-input small-input" type="text" 
