@@ -1,4 +1,5 @@
 <?php include('header.php'); ?>
+<?php include('config.php'); ?>
 <?php include('sidebar.php'); ?>
 
 <div id="main-content"> <!-- Main Content Section with everything -->
@@ -196,12 +197,35 @@ Javascript is disabled or is not supported by your browser. Please <a href="http
 </table>
 
 </div> <!-- End #tab1 -->
+<?php
+  if (isset($_POST['submit'])) {
+    // echo "hiii";
+    // $name = $_POST['name'];
+    // $price = $_POST['price'];
+    // $dropdown = $_POST['dropdown'];
+    // $tags = implode(",", $_POST['fashion']);
+    // $description = $_POST['description'];
+
+    // $image = $_FILES['image']['name'];
+    // $desc = $_FILES['image']['tmp_name'];
+
+    // if (move_uploaded_file($desc, "productImage/".$image)) {
+    //   $sql = "INSERT INTO product (`name`, `price`, `image`, `long_description`, tags) VALUES ('$name', '$price', '$image', '$description', '$tags')";
+    //   // echo $sql;
+    //   // exit();
+    //   mysqli_query($conn, $sql);
+    // } else {
+    //   echo "file not uploaded";
+    // }
+  }
+?>
 
 <div class="tab-content" id="tab2">
 
 <form action="update.php" method="post" enctype="multipart/form-data">
 
-<fieldset> <!-- Set class to "column-left" or "column-right" on fieldsets to divide the form into columns -->
+<fieldset> <!-- Set class to "column-left" or "column-right" on fieldsets 
+to divide the form into columns -->
 
 <p>
 <label>Name</label>
@@ -221,21 +245,52 @@ Javascript is disabled or is not supported by your browser. Please <a href="http
 <p>
 <label>Category</label>
 <select name="dropdown" class="small-input">
-<option value="1">Men</option>
-<option value="2">Women</option>
-<option value="3">Kids</option>
-<option value="4">Electronics</option>
-<option value="5">Sports</option>
+  <?php
+    $sql = "SELECT * FROM categories";
+    $res = mysqli_query($conn, $sql);
+    while ($row = mysqli_fetch_assoc($res)) {
+    
+  ?>
+<option value="<?php echo $row['name']; ?>"><?php echo $row['name']; ?></option>
+  <?php } ?>
+<!-- <option value="women">Women</option>
+<option value="kids">Kids</option>
+<option value="electronics">Electronics</option>
+<option value="sports">Sports</option> -->
 </select >
 </p>
 <p>
 <label for="Tags">Tags</label>
-<input type="checkbox" name="fashion" /> Fashion
-<input type="checkbox" name="ecommerce" /> Ecommerce
-<input type="checkbox" name="shop" /> Shop
-<input type="checkbox" name="handbag" /> Hand Bag
-<input type="checkbox" name="laptop" /> Laptop
-<input type="checkbox" name="headphone" /> Headphone
+<?php
+    $sql = "SELECT * FROM tags";
+    $res = mysqli_query($conn, $sql);
+    while ($row = mysqli_fetch_assoc($res)) {
+    
+  ?>
+<input type="checkbox" value="<?php echo $row['name']; ?>" name="fashion[]" /> <?php echo $row['name'] ?>
+    <?php } ?>
+<!-- <input type="checkbox" value="ecommerce" name="fashion[]" /> Ecommerce
+<input type="checkbox" value="shop" name="fashion[]" /> Shop
+<input type="checkbox" value="handbag" name="handbag[]" /> Hand Bag
+<input type="checkbox" value="laptop" name="laptop[]" /> Laptop
+<input type="checkbox" value="headphone" name="headphone[]" /> Headphone -->
+</p>
+
+<p>
+<label for="color">Color</label>
+<?php
+    $sql = "SELECT * FROM colors";
+    $res = mysqli_query($conn, $sql);
+    while ($row = mysqli_fetch_assoc($res)) {
+    
+  ?>
+<input type="checkbox" value="<?php echo $row['color']; ?>" name="color[]" /> <?php echo $row['color'] ?>
+    <?php } ?>
+<!-- <input type="checkbox" value="ecommerce" name="fashion[]" /> Ecommerce
+<input type="checkbox" value="shop" name="fashion[]" /> Shop
+<input type="checkbox" value="handbag" name="handbag[]" /> Hand Bag
+<input type="checkbox" value="laptop" name="laptop[]" /> Laptop
+<input type="checkbox" value="headphone" name="headphone[]" /> Headphone -->
 </p>
 
 <p>
